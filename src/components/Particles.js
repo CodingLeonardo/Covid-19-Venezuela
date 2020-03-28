@@ -108,13 +108,16 @@ const configParticle = {
   retina_detect: true
 };
 
-const Particles = () => {
-  return createPortal(
-    <ParticlesJS
-      className="absolute bg-secondary-200 h-full w-full"
-      params={configParticle}
-    />,
-    document.getElementById("particles")
+const Particles = props => {
+  const { children } = props;
+  return (
+    <div className="flex justify-center items-center absolute">
+      <div className="absolute z-10">{children}</div>
+      <ParticlesJS
+        className="h-almost absolute w-screen bg-secondary-200"
+        params={configParticle}
+      />
+    </div>
   );
 };
 

@@ -22,6 +22,9 @@ module.exports = {
         "fourty-300": "#B9BED4",
         "fourty-400": "#8A92B4",
         "fourty-500": "#5F6997"
+      },
+      height: {
+        almost: "calc(100vh - 2.5em)"
       }
     }
   },

@@ -11,6 +11,7 @@ const Footer = () => {
               href="https://github.com/LeonardoCoding"
               target="_blank"
               className="underline"
+              rel="noopener noreferrer"
             >
               @LeonardoCoding
             </a>

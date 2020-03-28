@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import Cases from "./components/Cases";
 import getCases from "./utils/getCases";
-import Particles from "./components/Particles";
-import Footer from "./components/Footer";
+import Layout from "./components/Layout";
+import Cases from "./components/Cases";
 import "./assets/css/styles.css";
 
 class App extends Component {
@@ -37,17 +36,16 @@ class App extends Component {
     ) {
       return (
         <>
-          <div>
-            <div className="container-screen absolute">
-              <Particles />
-              <div className="z-20">
+          <Layout>
+            <div className="flex justify-center items-center flex-col">
+              <div>
                 <h1 className="text-5xl text-gray-900 ">
                   Covid-19 - <span className="text-primary-300">Ven</span>
                   <span className="text-tertiary-300">ezu</span>
                   <span className="text-secondary-300">ela</span>
                 </h1>
               </div>
-              <div className="container-flex shadow-2xl h-64 rounded bg-primary-300 z-20">
+              <div className="container-flex shadow-2xl h-64 rounded bg-primary-300">
                 <Cases
                   status="Confirmados"
                   cases={
@@ -66,10 +64,7 @@ class App extends Component {
                 />
               </div>
             </div>
-            <div className="flex justify-end items-end h-screen w-screen absolute z-10">
-              <Footer />
-            </div>
-          </div>
+          </Layout>
         </>
       );
     }
