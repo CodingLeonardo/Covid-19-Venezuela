@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Covid-19-Venezuela/precache-manifest.e5ec8e110f80114d4edb99da776c1951.js"
+  "/Covid-19-Venezuela/precache-manifest.bff384de3261fa703717437a96f21bf3.js"
 );
 
 self.addEventListener('message', (event) => {
