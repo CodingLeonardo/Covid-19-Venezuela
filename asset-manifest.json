@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Covid-19-Venezuela/static/css/main.48b962a8.chunk.css",
-    "main.js": "/Covid-19-Venezuela/static/js/main.a6d4ec1b.chunk.js",
-    "main.js.map": "/Covid-19-Venezuela/static/js/main.a6d4ec1b.chunk.js.map",
+    "main.css": "/Covid-19-Venezuela/static/css/main.17d9f63c.chunk.css",
+    "main.js": "/Covid-19-Venezuela/static/js/main.48d795dc.chunk.js",
+    "main.js.map": "/Covid-19-Venezuela/static/js/main.48d795dc.chunk.js.map",
     "runtime-main.js": "/Covid-19-Venezuela/static/js/runtime-main.a7fa61c7.js",
     "runtime-main.js.map": "/Covid-19-Venezuela/static/js/runtime-main.a7fa61c7.js.map",
     "static/js/2.a4674910.chunk.js": "/Covid-19-Venezuela/static/js/2.a4674910.chunk.js",
     "static/js/2.a4674910.chunk.js.map": "/Covid-19-Venezuela/static/js/2.a4674910.chunk.js.map",
     "index.html": "/Covid-19-Venezuela/index.html",
-    "precache-manifest.0bd5784879ddf51b64ff2ac160874b8f.js": "/Covid-19-Venezuela/precache-manifest.0bd5784879ddf51b64ff2ac160874b8f.js",
+    "precache-manifest.e5ec8e110f80114d4edb99da776c1951.js": "/Covid-19-Venezuela/precache-manifest.e5ec8e110f80114d4edb99da776c1951.js",
     "service-worker.js": "/Covid-19-Venezuela/service-worker.js",
-    "static/css/main.48b962a8.chunk.css.map": "/Covid-19-Venezuela/static/css/main.48b962a8.chunk.css.map",
+    "static/css/main.17d9f63c.chunk.css.map": "/Covid-19-Venezuela/static/css/main.17d9f63c.chunk.css.map",
     "static/js/2.a4674910.chunk.js.LICENSE.txt": "/Covid-19-Venezuela/static/js/2.a4674910.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a7fa61c7.js",
     "static/js/2.a4674910.chunk.js",
-    "static/css/main.48b962a8.chunk.css",
-    "static/js/main.a6d4ec1b.chunk.js"
+    "static/css/main.17d9f63c.chunk.css",
+    "static/js/main.48d795dc.chunk.js"
   ]
 }
