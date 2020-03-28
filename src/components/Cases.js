@@ -15,7 +15,7 @@ const Cases = props => {
   return (
     <>
       <div
-        className={`flex items-center justify-center flex-col w-1/3 p-6 h-full transition duration-500 rounded ${bg}`}
+        className={`container-cases p-6 transition duration-500 rounded ${bg}`}
       >
         <h1 className="text-2xl">{status}</h1>
         <span>{cases}</span>

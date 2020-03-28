@@ -10905,6 +10905,45 @@ video {
   transition-duration: 1000ms;
 }
 
+.container-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-cases {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 33.333333%;
+  height: 100%;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro&display=swap");
+
+body {
+  font-family: "Source Sans Pro";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Fjalla One";
+}
+
 @media (min-width: 640px) {
   .sm\:sr-only {
     position: absolute;

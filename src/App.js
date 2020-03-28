@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Cases from "./components/Cases";
 import getCases from "./utils/getCases";
+import Particles from "./components/Particles";
 import "./assets/css/styles.css";
 
 class App extends Component {
@@ -35,8 +36,12 @@ class App extends Component {
     ) {
       return (
         <>
-          <div className="flex justify-center items-center h-screen">
-            <div className="flex justify-center items-center shadow-2xl h-64 rounded">
+          <div className="container-screen bg-blue-800 absolute">
+            <Particles />
+            <div className="z-10">
+              <h1 className="text-3xl text-gray-900 ">Covid-19 - Venezuela</h1>
+            </div>
+            <div className="container-flex shadow-2xl h-64 rounded bg-green-400 z-10">
               <Cases
                 status="Confirmados"
                 cases={

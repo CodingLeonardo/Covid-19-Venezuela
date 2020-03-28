@@ -1,0 +1,121 @@
+import React from "react";
+import { createPortal } from "react-dom";
+import ParticlesJS from "react-particles-js";
+
+const configParticle = {
+  particles: {
+    number: {
+      value: 88,
+      density: {
+        enable: true,
+        value_area: 700
+      }
+    },
+    color: {
+      value: ["#aa73ff", "#f8c210", "#83d238", "#33b1f8"]
+    },
+    shape: {
+      type: "circle",
+      stroke: {
+        width: 0,
+        color: "#000000"
+      },
+      polygon: {
+        nb_sides: 15
+      }
+    },
+    opacity: {
+      value: 0.5,
+      random: false,
+      anim: {
+        enable: false,
+        speed: 1.5,
+        opacity_min: 0.15,
+        sync: false
+      }
+    },
+    size: {
+      value: 3,
+      random: false,
+      anim: {
+        enable: true,
+        speed: 2,
+        size_min: 0.15,
+        sync: false
+      }
+    },
+    line_linked: {
+      enable: true,
+      distance: 110,
+      color: "#33b1f8",
+      opacity: 0.25,
+      width: 2
+    },
+    move: {
+      enable: true,
+      speed: 5,
+      direction: "none",
+      random: false,
+      straight: false,
+      out_mode: "out",
+      bounce: false,
+      attract: {
+        enable: false,
+        rotateX: 600,
+        rotateY: 1200
+      }
+    }
+  },
+  interactivity: {
+    detect_on: "canvas",
+    events: {
+      onhover: {
+        enable: true,
+        mode: "bubble"
+      },
+      onclick: {
+        enable: false,
+        mode: "push"
+      },
+      resize: true
+    },
+    modes: {
+      grab: {
+        distance: 400,
+        line_linked: {
+          opacity: 1
+        }
+      },
+      bubble: {
+        distance: 400,
+        size: 10,
+        duration: 2,
+        opacity: 8,
+        speed: 3
+      },
+      repulse: {
+        distance: 200,
+        duration: 0.4
+      },
+      push: {
+        particles_nb: 4
+      },
+      remove: {
+        particles_nb: 2
+      }
+    }
+  },
+  retina_detect: true
+};
+
+const Particles = () => {
+  return createPortal(
+    <ParticlesJS
+      className="absolute bg-blue-900 h-full w-full"
+      params={configParticle}
+    />,
+    document.getElementById("particles")
+  );
+};
+
+export default Particles;
