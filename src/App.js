@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Cases from "./components/Cases";
 import getCases from "./utils/getCases";
 import Particles from "./components/Particles";
+import Footer from "./components/Footer";
 import "./assets/css/styles.css";
 
 class App extends Component {
@@ -36,28 +37,37 @@ class App extends Component {
     ) {
       return (
         <>
-          <div className="container-screen bg-blue-800 absolute">
-            <Particles />
-            <div className="z-10">
-              <h1 className="text-3xl text-gray-900 ">Covid-19 - Venezuela</h1>
+          <div>
+            <div className="container-screen absolute">
+              <Particles />
+              <div className="z-20">
+                <h1 className="text-5xl text-gray-900 ">
+                  Covid-19 - <span className="text-primary-300">Ven</span>
+                  <span className="text-tertiary-300">ezu</span>
+                  <span className="text-secondary-300">ela</span>
+                </h1>
+              </div>
+              <div className="container-flex shadow-2xl h-64 rounded bg-primary-300 z-20">
+                <Cases
+                  status="Confirmados"
+                  cases={
+                    this.state.confirmed[this.state.confirmed.length - 1].Cases
+                  }
+                />
+                <Cases
+                  status="Recuperados"
+                  cases={
+                    this.state.recovered[this.state.recovered.length - 1].Cases
+                  }
+                />
+                <Cases
+                  status="Muertes"
+                  cases={this.state.deaths[this.state.deaths.length - 1].Cases}
+                />
+              </div>
             </div>
-            <div className="container-flex shadow-2xl h-64 rounded bg-green-400 z-10">
-              <Cases
-                status="Confirmados"
-                cases={
-                  this.state.confirmed[this.state.confirmed.length - 1].Cases
-                }
-              />
-              <Cases
-                status="Recuperados"
-                cases={
-                  this.state.recovered[this.state.recovered.length - 1].Cases
-                }
-              />
-              <Cases
-                status="Muertes"
-                cases={this.state.deaths[this.state.deaths.length - 1].Cases}
-              />
+            <div className="flex justify-end items-end h-screen w-screen absolute z-10">
+              <Footer />
             </div>
           </div>
         </>

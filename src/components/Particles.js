@@ -111,7 +111,7 @@ const configParticle = {
 const Particles = () => {
   return createPortal(
     <ParticlesJS
-      className="absolute bg-blue-900 h-full w-full"
+      className="absolute bg-secondary-200 h-full w-full"
       params={configParticle}
     />,
     document.getElementById("particles")

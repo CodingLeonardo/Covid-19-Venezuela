@@ -4,18 +4,18 @@ const Cases = props => {
   const { status, cases } = props;
   let bg;
   if (status === "Confirmados") {
-    bg = `hover:bg-yellow-400 hover:text-yellow-900`;
+    bg = `hover:bg-primary-500`;
   }
   if (status === "Recuperados") {
-    bg = `hover:bg-blue-400 hover:text-blue-900`;
+    bg = `hover:bg-tertiary-400`;
   }
   if (status === "Muertes") {
-    bg = `hover:bg-red-400 hover:text-red-900`;
+    bg = `hover:bg-secondary-400`;
   }
   return (
     <>
       <div
-        className={`container-cases p-6 transition duration-500 rounded ${bg}`}
+        className={`container-cases p-6 transition duration-500 rounded hover:text-white ${bg}`}
       >
         <h1 className="text-2xl">{status}</h1>
         <span>{cases}</span>
