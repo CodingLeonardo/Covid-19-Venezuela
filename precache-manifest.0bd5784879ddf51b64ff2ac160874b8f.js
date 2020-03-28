@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4e1c62094319daef271af3deee81aa13",
+    "revision": "5ec8dd1b10aef5baefc88a75c729f595",
     "url": "/Covid-19-Venezuela/index.html"
   },
   {
-    "revision": "9e099f595b5cb1eda42f",
-    "url": "/Covid-19-Venezuela/static/css/main.4bfba7ee.chunk.css"
+    "revision": "3e735e7f6ee64488f416",
+    "url": "/Covid-19-Venezuela/static/css/main.48b962a8.chunk.css"
   },
   {
     "revision": "bcfbf6b50939777e12da",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Covid-19-Venezuela/static/js/2.a4674910.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9e099f595b5cb1eda42f",
-    "url": "/Covid-19-Venezuela/static/js/main.7b887c81.chunk.js"
+    "revision": "3e735e7f6ee64488f416",
+    "url": "/Covid-19-Venezuela/static/js/main.a6d4ec1b.chunk.js"
   },
   {
     "revision": "b0a4dc94b18ad8c5ed7e",
