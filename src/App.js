@@ -39,13 +39,13 @@ class App extends Component {
           <Layout>
             <div className="flex justify-center items-center flex-col">
               <div>
-                <h1 className="text-5xl text-gray-900 ">
+                <h1 className="text-5xl text-center mobile-s:text-4xl mobile-m:text-4xl mobile-l:text-4xl text-gray-900 ">
                   Covid-19 - <span className="text-primary-300">Ven</span>
                   <span className="text-tertiary-300">ezu</span>
                   <span className="text-secondary-300">ela</span>
                 </h1>
               </div>
-              <div className="container-flex shadow-2xl h-64 rounded bg-primary-300">
+              <div className="container-flex w-full flex-row h-64 mobile-s:h-auto mobile-s:flex-col mobile-m:h-auto mobile-m:flex-col mobile-l:h-auto mobile-l:flex-col shadow-2xl rounded bg-primary-300">
                 <Cases
                   status="Confirmados"
                   cases={

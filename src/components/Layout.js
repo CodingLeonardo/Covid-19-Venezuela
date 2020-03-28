@@ -5,7 +5,7 @@ import Particles from "./Particles";
 const Layout = props => {
   const { children } = props;
   return (
-    <div className="h-screen w-screen">
+    <div className="h-full w-full">
       <div className="flex justify-center items-center h-almost">
         <Particles>{children}</Particles>
       </div>

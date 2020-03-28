@@ -15,7 +15,7 @@ const Cases = props => {
   return (
     <>
       <div
-        className={`container-cases p-6 transition duration-500 rounded hover:text-white ${bg}`}
+        className={`container-cases mobile-s:w-full mobile-m:w-full mobile-l:w-full p-6 transition duration-500 rounded hover:text-white ${bg}`}
       >
         <h1 className="text-2xl">{status}</h1>
         <span>{cases}</span>

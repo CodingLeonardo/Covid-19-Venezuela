@@ -25,6 +25,11 @@ module.exports = {
       },
       height: {
         almost: "calc(100vh - 2.5em)"
+      },
+      screens: {
+        "mobile-s": { max: "320px" },
+        "mobile-m": { max: "375px" },
+        "mobile-l": { max: "425px" }
       }
     }
   },
