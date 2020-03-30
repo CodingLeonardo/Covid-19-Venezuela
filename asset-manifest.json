@@ -1,22 +1,26 @@
 {
   "files": {
     "main.css": "/Covid-19-Venezuela/static/css/main.17d9f63c.chunk.css",
-    "main.js": "/Covid-19-Venezuela/static/js/main.fcd7381c.chunk.js",
-    "main.js.map": "/Covid-19-Venezuela/static/js/main.fcd7381c.chunk.js.map",
+    "main.js": "/Covid-19-Venezuela/static/js/main.80c99b36.chunk.js",
+    "main.js.map": "/Covid-19-Venezuela/static/js/main.80c99b36.chunk.js.map",
     "runtime-main.js": "/Covid-19-Venezuela/static/js/runtime-main.a7fa61c7.js",
     "runtime-main.js.map": "/Covid-19-Venezuela/static/js/runtime-main.a7fa61c7.js.map",
-    "static/js/2.fad04865.chunk.js": "/Covid-19-Venezuela/static/js/2.fad04865.chunk.js",
-    "static/js/2.fad04865.chunk.js.map": "/Covid-19-Venezuela/static/js/2.fad04865.chunk.js.map",
+    "static/js/2.eaa604e3.chunk.js": "/Covid-19-Venezuela/static/js/2.eaa604e3.chunk.js",
+    "static/js/2.eaa604e3.chunk.js.map": "/Covid-19-Venezuela/static/js/2.eaa604e3.chunk.js.map",
     "index.html": "/Covid-19-Venezuela/index.html",
-    "precache-manifest.bff384de3261fa703717437a96f21bf3.js": "/Covid-19-Venezuela/precache-manifest.bff384de3261fa703717437a96f21bf3.js",
+    "precache-manifest.5539b12e6e9d6d08ec9ba3202d28dce3.js": "/Covid-19-Venezuela/precache-manifest.5539b12e6e9d6d08ec9ba3202d28dce3.js",
     "service-worker.js": "/Covid-19-Venezuela/service-worker.js",
     "static/css/main.17d9f63c.chunk.css.map": "/Covid-19-Venezuela/static/css/main.17d9f63c.chunk.css.map",
-    "static/js/2.fad04865.chunk.js.LICENSE.txt": "/Covid-19-Venezuela/static/js/2.fad04865.chunk.js.LICENSE.txt"
+    "static/js/2.eaa604e3.chunk.js.LICENSE.txt": "/Covid-19-Venezuela/static/js/2.eaa604e3.chunk.js.LICENSE.txt",
+    "static/media/virus-cian.svg": "/Covid-19-Venezuela/static/media/virus-cian.8a76d1ea.svg",
+    "static/media/virus-green.svg": "/Covid-19-Venezuela/static/media/virus-green.ef13cd89.svg",
+    "static/media/virus-purple.svg": "/Covid-19-Venezuela/static/media/virus-purple.81f18a79.svg",
+    "static/media/virus-yellow.svg": "/Covid-19-Venezuela/static/media/virus-yellow.a720ddcc.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.a7fa61c7.js",
-    "static/js/2.fad04865.chunk.js",
+    "static/js/2.eaa604e3.chunk.js",
     "static/css/main.17d9f63c.chunk.css",
-    "static/js/main.fcd7381c.chunk.js"
+    "static/js/main.80c99b36.chunk.js"
   ]
 }
