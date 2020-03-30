@@ -1,21 +1,19 @@
-const path = require("path");
-const fs = require("fs");
-const glob = require("glob-all");
-
-const appDirectory = fs.realpathSync(process.cwd());
-const resolveApp = relativePath => path.resolve(appDirectory, relativePath);
-
-const PurgecssPlugin = require("purgecss-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
   webpack: {
-    plugins: [
-      new PurgecssPlugin({
-        paths: [
-          resolveApp("public/index.html"),
-          ...glob.sync(`${resolveApp("src")}/**/**/*`, { nodir: true })
-        ]
-      })
-    ]
+    optimization: {
+      minimize: true,
+      minimizer: [
+        new TerserPlugin({
+          terserOptions: {
+            extractComments: "all",
+            compress: {
+              drop_console: true
+            }
+          }
+        })
+      ]
+    }
   }
 };

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import getCases from "./utils/getCases";
 import Layout from "./components/Layout";
 import Cases from "./components/Cases";
+import PageLoading from "./components/PageLoading";
 import "./assets/css/styles.css";
 
 class App extends Component {
@@ -27,7 +28,7 @@ class App extends Component {
       !this.state.recovered.length &&
       !this.state.deaths.length
     ) {
-      return "loading...";
+      return <PageLoading />;
     }
     if (
       this.state.confirmed.length > 0 &&

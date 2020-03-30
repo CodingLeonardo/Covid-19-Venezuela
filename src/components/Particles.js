@@ -1,6 +1,11 @@
 import React from "react";
-import { createPortal } from "react-dom";
 import ParticlesJS from "react-particles-js";
+import VirusPurple from "../assets/images/virus-purple.svg";
+import VirusYellow from "../assets/images/virus-yellow.svg";
+import VirusGreen from "../assets/images/virus-green.svg";
+import VirusCian from "../assets/images/virus-cian.svg";
+
+const colors = ["#aa73ff", "#f8c210", "#83d238", "#33b1f8"];
 
 const configParticle = {
   particles: {
@@ -12,10 +17,32 @@ const configParticle = {
       }
     },
     color: {
-      value: ["#aa73ff", "#f8c210", "#83d238", "#33b1f8"]
+      value: [...colors]
     },
     shape: {
-      type: "circle",
+      type: ["images"],
+      images: [
+        {
+          src: VirusPurple,
+          height: 20,
+          width: 23
+        },
+        {
+          src: VirusYellow,
+          height: 20,
+          width: 23
+        },
+        {
+          src: VirusGreen,
+          height: 20,
+          width: 23
+        },
+        {
+          src: VirusCian,
+          height: 20,
+          width: 23
+        }
+      ],
       stroke: {
         width: 0,
         color: "#000000"
@@ -25,7 +52,7 @@ const configParticle = {
       }
     },
     opacity: {
-      value: 0.5,
+      value: 0.7,
       random: false,
       anim: {
         enable: false,
@@ -35,7 +62,7 @@ const configParticle = {
       }
     },
     size: {
-      value: 3,
+      value: 10,
       random: false,
       anim: {
         enable: true,
@@ -54,7 +81,7 @@ const configParticle = {
     move: {
       enable: true,
       speed: 5,
-      direction: "none",
+      direction: "top",
       random: false,
       straight: false,
       out_mode: "out",
@@ -88,9 +115,9 @@ const configParticle = {
       },
       bubble: {
         distance: 400,
-        size: 10,
+        size: 15,
         duration: 2,
-        opacity: 8,
+        opacity: 10,
         speed: 3
       },
       repulse: {
