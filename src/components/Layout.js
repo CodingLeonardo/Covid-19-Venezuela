@@ -7,7 +7,6 @@ const Layout = (props) => {
   return (
     <div className="h-full w-screen">
       <div className="flex justify-center items-center h-full">
-        <Particles />
         <div className="z-20">{children}</div>
       </div>
       <div className="h-10 w-screen absolute z-20">

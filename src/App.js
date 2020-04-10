@@ -44,7 +44,7 @@ class App extends Component {
       return (
         <>
           <Layout>
-            <div className="container-flex flex-col w-11/12vw px-4 py-4 shadow-2xl bg-primary-300">
+            <div className="container-flex flex-col w-screen px-4 py-4 shadow-2xl bg-primary-300">
               <div>
                 <h1 className="text-5xl text-center mobile-s:text-4xl mobile-m:text-4xl mobile-l:text-4xl text-gray-900 ">
                   Covid-19 - <span className="text-primary-500">Ven</span>
@@ -52,7 +52,7 @@ class App extends Component {
                   <span className="text-secondary-300">ela</span>
                 </h1>
               </div>
-              <div className="container-flex flex-col w-full h-almost-chart bg-primary-300 mb-4">
+              <div className="container-flex flex-col w-10/12 h-almost-chart bg-primary-300 mb-4">
                 <Chart
                   type="Line"
                   data={{
@@ -62,7 +62,7 @@ class App extends Component {
                   }}
                 />
               </div>
-              <div className="container-flex flex-col w-full h-almost-chart bg-primary-300">
+              <div className="container-flex flex-col w-10/12 h-almost-chart bg-primary-300">
                 <Chart
                   type="Pie"
                   data={{
