@@ -12,4 +12,7 @@ Es una pagina web que nos muestra los indices de casos confirmados, recuperados 
 
 - [CSSNano](https://cssnano.co/) - Usado para minificar los archivos css.
 
-- [ParticlesJSReact](https://cssnano.co/) - Usado para poner particulas al background de la pagina.
+- [PurgeCSS](https://purgecss.com/) - Usado para quitar las clase CSS no usadas.
+
+- [ParticlesJS](https://vincentgarreau.com/particles.js/) - Usado para poner particulas al background de la pagina.
+https://purgecss.com/
