@@ -4,18 +4,24 @@ import Layout from "./components/Layout";
 import Cases from "./components/Cases";
 import PageLoading from "./components/PageLoading";
 import "./assets/css/styles.css";
+import Chart from "./components/Chart";
 
 class App extends Component {
   state = {
     confirmed: [],
     recovered: [],
-    deaths: []
+    deaths: [],
   };
 
-  fetchData() {
-    getCases("confirmed", this);
-    getCases("recovered", this);
-    getCases("deaths", this);
+  async fetchData() {
+    const confirmed = await getCases("confirmed");
+    const recovered = await getCases("recovered");
+    const deaths = await getCases("deaths");
+    this.setState({
+      confirmed: confirmed,
+      recovered: recovered,
+      deaths: deaths,
+    });
   }
 
   componentDidMount() {
@@ -38,30 +44,32 @@ class App extends Component {
       return (
         <>
           <Layout>
-            <div className="flex justify-center items-center flex-col">
+            <div className="container-flex flex-col w-11/12vw px-4 py-4 shadow-2xl bg-primary-300">
               <div>
                 <h1 className="text-5xl text-center mobile-s:text-4xl mobile-m:text-4xl mobile-l:text-4xl text-gray-900 ">
-                  Covid-19 - <span className="text-primary-300">Ven</span>
+                  Covid-19 - <span className="text-primary-500">Ven</span>
                   <span className="text-tertiary-300">ezu</span>
                   <span className="text-secondary-300">ela</span>
                 </h1>
               </div>
-              <div className="container-flex w-full flex-row h-64 mobile-s:h-auto mobile-s:flex-col mobile-m:h-auto mobile-m:flex-col mobile-l:h-auto mobile-l:flex-col shadow-2xl rounded bg-primary-300">
-                <Cases
-                  status="Confirmados"
-                  cases={
-                    this.state.confirmed[this.state.confirmed.length - 1].Cases
-                  }
+              <div className="container-flex flex-col w-full h-almost-chart bg-primary-300 mb-4">
+                <Chart
+                  type="Line"
+                  data={{
+                    confirmed: this.state.confirmed,
+                    recovered: this.state.recovered,
+                    deaths: this.state.deaths,
+                  }}
                 />
-                <Cases
-                  status="Recuperados"
-                  cases={
-                    this.state.recovered[this.state.recovered.length - 1].Cases
-                  }
-                />
-                <Cases
-                  status="Muertes"
-                  cases={this.state.deaths[this.state.deaths.length - 1].Cases}
+              </div>
+              <div className="container-flex flex-col w-full h-almost-chart bg-primary-300">
+                <Chart
+                  type="Pie"
+                  data={{
+                    confirmed: this.state.confirmed,
+                    recovered: this.state.recovered,
+                    deaths: this.state.deaths,
+                  }}
                 />
               </div>
             </div>

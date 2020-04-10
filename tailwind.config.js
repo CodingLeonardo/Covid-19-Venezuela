@@ -21,18 +21,22 @@ module.exports = {
         "fourty-200": "#DFE1EB",
         "fourty-300": "#B9BED4",
         "fourty-400": "#8A92B4",
-        "fourty-500": "#5F6997"
+        "fourty-500": "#5F6997",
       },
       height: {
-        almost: "calc(100vh - 2.5em)"
+        almost: "calc(100vh - 2.5rem)",
+        "almost-chart": "70vh",
+      },
+      width: {
+        "11/12vw": "91.666667vw",
       },
       screens: {
         "mobile-s": { max: "320px" },
         "mobile-m": { max: "375px" },
-        "mobile-l": { max: "425px" }
-      }
-    }
+        "mobile-l": { max: "425px" },
+      },
+    },
   },
   variants: {},
-  plugins: []
+  plugins: [],
 };
