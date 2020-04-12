@@ -1,5 +1,5 @@
 {
-  "homepage": "https://LeonardoCoding.github.io/Covid-19-Venezuela",
+  "homepage": "https://codingleonardo.github.io/Covid-19-Venezuela",
   "name": "covid-19-ve",
   "version": "0.1.0",
   "private": true,
@@ -8,21 +8,21 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "axios": "^0.19.2",
     "chart.js": "^2.9.3",
     "react": "^16.13.1",
     "react-chartjs-2": "^2.9.0",
     "react-dom": "^16.13.1",
-    "react-particles-js": "^2.7.1",
+    "react-lazyload": "^2.6.7",
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "predeploy": "npm run build",
+    "predeploy": "yarn run build",
     "deploy": "gh-pages -d build",
     "dev:style": "postcss src/assets/css/tailwind.css -o src/assets/css/styles.css -w",
     "dev:react": "craco start",
     "dev": "npm-run-all -l -p dev:style dev:react",
     "build": "craco build",
+    "serve": "serve -s build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -49,7 +49,6 @@
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^7.1.0",
     "serve": "^11.3.0",
-    "tailwindcss": "^1.2.0",
     "terser-webpack-plugin": "^2.3.5"
   }
 }

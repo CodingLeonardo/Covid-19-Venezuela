@@ -1,17 +1,16 @@
 import React from "react";
 import Footer from "./Footer";
-import Particles from "./Particles";
+
+import "../assets/css/Layout.css";
 
 const Layout = (props) => {
   const { children } = props;
   return (
-    <div className="h-full w-screen">
-      <div className="flex justify-center items-center h-full">
-        <div className="z-20">{children}</div>
+    <div className="Layout">
+      <div className="Layout-app">
+        <div>{children}</div>
       </div>
-      <div className="h-10 w-screen absolute z-20">
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 };

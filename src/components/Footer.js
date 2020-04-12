@@ -1,16 +1,18 @@
 import React from "react";
 
+import "../assets/css/Footer.css";
+
 const Footer = () => {
   return (
     <>
-      <div className="flex items-center justify-center w-full h-10 bg-tertiary-100 shadow-inner fixed inset-x-0 bottom-0">
+      <div className="Footer">
         <div>
-          <h1 className="text-white">
+          <h1>
             Designed with ❤ by{" "}
             <a
               href="https://github.com/LeonardoCoding"
               target="_blank"
-              className="underline"
+              className="Footer-link"
               rel="noopener noreferrer"
             >
               @LeonardoCoding

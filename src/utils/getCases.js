@@ -1,6 +1,4 @@
-import axios from "axios";
-
-const getCases = async status => {
+const getCases = async (status) => {
   const url = `https://api.covid19api.com/country/venezuela/status/${status}/live`;
   try {
     const response = await fetch(url);

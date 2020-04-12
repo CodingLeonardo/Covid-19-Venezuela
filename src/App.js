@@ -1,27 +1,78 @@
-import React, { Component } from "react";
+import React, { Component, lazy, Suspense } from "react";
 import getCases from "./utils/getCases";
 import Layout from "./components/Layout";
-import Cases from "./components/Cases";
+import Header from "./components/Header";
+import ContainerCharts from "./components/ContainerCharts";
 import PageLoading from "./components/PageLoading";
-import "./assets/css/styles.css";
-import Chart from "./components/Chart";
+import LazyLoad from "react-lazyload";
 
 class App extends Component {
   state = {
-    confirmed: [],
-    recovered: [],
-    deaths: [],
+    charts: ["Line", "Pie"],
+    data: {
+      confirmed: [],
+      recovered: [],
+      deaths: [],
+    },
+    loading: false,
+    error: null,
   };
 
   async fetchData() {
-    const confirmed = await getCases("confirmed");
-    const recovered = await getCases("recovered");
-    const deaths = await getCases("deaths");
-    this.setState({
-      confirmed: confirmed,
-      recovered: recovered,
-      deaths: deaths,
-    });
+    this.setState({ loading: true });
+    try {
+      const confirmed = await getCases("confirmed");
+      const recovered = await getCases("recovered");
+      const deaths = await getCases("deaths");
+      this.setState({
+        data: {
+          confirmed: confirmed,
+          recovered: recovered,
+          deaths: deaths,
+        },
+        loading: false,
+      });
+    } catch (error) {
+      this.setState({ loading: false, error: error });
+    }
+  }
+
+  renderCharts() {
+    if (this.state.loading) {
+      return <PageLoading />;
+    }
+    if (
+      !this.state.loading &&
+      this.state.data.confirmed.length > 0 &&
+      this.state.data.recovered.length > 0 &&
+      this.state.data.deaths.length > 0
+    ) {
+      return (
+        <LazyLoad>
+          <Header />
+          <ContainerCharts
+            charts={[
+              {
+                data: {
+                  confirmed: this.state.data.confirmed,
+                  recovered: this.state.data.recovered,
+                  deaths: this.state.data.deaths,
+                },
+                type: "Line",
+              },
+              {
+                data: {
+                  confirmed: this.state.data.confirmed,
+                  recovered: this.state.data.recovered,
+                  deaths: this.state.data.deaths,
+                },
+                type: "Pie",
+              },
+            ]}
+          />
+        </LazyLoad>
+      );
+    }
   }
 
   componentDidMount() {
@@ -29,55 +80,11 @@ class App extends Component {
   }
 
   render() {
-    if (
-      !this.state.confirmed.length &&
-      !this.state.recovered.length &&
-      !this.state.deaths.length
-    ) {
-      return <PageLoading />;
-    }
-    if (
-      this.state.confirmed.length > 0 &&
-      this.state.recovered.length > 0 &&
-      this.state.deaths.length > 0
-    ) {
-      return (
-        <>
-          <Layout>
-            <div className="container-flex flex-col w-screen px-4 py-4 shadow-2xl bg-primary-300">
-              <div>
-                <h1 className="text-5xl text-center mobile-s:text-4xl mobile-m:text-4xl mobile-l:text-4xl text-gray-900 ">
-                  Covid-19 - <span className="text-primary-500">Ven</span>
-                  <span className="text-tertiary-300">ezu</span>
-                  <span className="text-secondary-300">ela</span>
-                </h1>
-              </div>
-              <div className="container-flex flex-col w-10/12 h-almost-chart bg-primary-300 mb-4">
-                <Chart
-                  type="Line"
-                  data={{
-                    confirmed: this.state.confirmed,
-                    recovered: this.state.recovered,
-                    deaths: this.state.deaths,
-                  }}
-                />
-              </div>
-              <div className="container-flex flex-col w-10/12 h-almost-chart bg-primary-300">
-                <Chart
-                  type="Pie"
-                  data={{
-                    confirmed: this.state.confirmed,
-                    recovered: this.state.recovered,
-                    deaths: this.state.deaths,
-                  }}
-                />
-              </div>
-            </div>
-          </Layout>
-        </>
-      );
-    }
-    return "";
+    return (
+      <>
+        <Layout>{this.renderCharts()}</Layout>
+      </>
+    );
   }
 }
 

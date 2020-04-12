@@ -9,11 +9,11 @@ module.exports = {
           terserOptions: {
             extractComments: "all",
             compress: {
-              drop_console: true
-            }
-          }
-        })
-      ]
-    }
-  }
+              drop_console: true,
+            },
+          },
+        }),
+      ],
+    },
+  },
 };

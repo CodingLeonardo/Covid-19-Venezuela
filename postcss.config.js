@@ -3,9 +3,8 @@ const purgecss = require("@fullhuman/postcss-purgecss");
 module.exports = {
   plugins: [
     require("autoprefixer"),
-    require("tailwindcss"),
     require("cssnano")({
-      preset: "default"
+      preset: "default",
     }),
     process.env.NODE_ENV === "production" &&
       purgecss({
@@ -17,9 +16,9 @@ module.exports = {
                 return content.match(/[A-Za-z0-9-_:\/]+/g) || [];
               }
             },
-            extensions: ["css", "html", "js"]
-          }
-        ]
-      })
-  ]
+            extensions: ["css", "html", "js"],
+          },
+        ],
+      }),
+  ],
 };

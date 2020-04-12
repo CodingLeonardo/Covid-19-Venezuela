@@ -1,10 +1,12 @@
 import React from "react";
 import Loading from "./Loading";
 
+import "../assets/css/PageLoading.css";
+
 const PageLoading = () => {
   return (
     <>
-      <div className="flex justify-center items-center h-screen bg-secondary-100">
+      <div className="PageLoading">
         <Loading />
       </div>
     </>
