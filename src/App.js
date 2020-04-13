@@ -69,6 +69,14 @@ class App extends Component {
               {
                 data: {
                   confirmed: this.state.data.confirmed,
+                  recovered: [],
+                  deaths: [],
+                },
+                type: "LineProyection",
+              },
+              {
+                data: {
+                  confirmed: this.state.data.confirmed,
                   recovered: this.state.data.recovered,
                   deaths: this.state.data.deaths,
                 },
