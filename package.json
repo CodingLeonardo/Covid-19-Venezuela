@@ -9,6 +9,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "chart.js": "^2.9.3",
+    "postcss-preset-env": "^6.7.0",
     "react": "^16.13.1",
     "react-chartjs-2": "^2.9.0",
     "react-dom": "^16.13.1",
@@ -18,9 +19,8 @@
   "scripts": {
     "predeploy": "yarn run build",
     "deploy": "gh-pages -d build",
-    "dev:style": "postcss src/assets/css/tailwind.css -o src/assets/css/styles.css -w",
     "dev:react": "craco start",
-    "dev": "npm-run-all -l -p dev:style dev:react",
+    "dev": "npm-run-all -l -p dev:react",
     "build": "craco build",
     "serve": "serve -s build",
     "test": "react-scripts test",

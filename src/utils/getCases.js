@@ -1,12 +1,41 @@
-const getCases = async (status) => {
-  const url = `https://api.covid19api.com/country/venezuela/status/${status}/live`;
-  try {
-    const response = await fetch(url);
-    const data = response.json();
-    return data;
-  } catch (error) {
-    console.error(error);
-  }
+const baseURL = "https://api.covid19api.com/country/venezuela/statuss/";
+
+// const getCases = async (status) => {
+//   const url = `${baseURL}${status}/live`;
+//   try {
+//     const response = await fetch(url);
+//     const data = response.json();
+//     return data;
+//   } catch (error) {
+//     return error;
+//   }
+// };
+
+const getCases = (status) => {
+  const url = `${baseURL}${status}/live`;
+  return new Promise(async (resolve, reject) => {
+    try {
+      const response = await fetch(url, {});
+      const data = response.json();
+      resolve(data);
+    } catch (error) {
+      reject(error);
+    }
+  });
 };
 
-export default getCases;
+const getAllCases = async () => {
+  const confirmed = await getCases("confirmed");
+  const recovered = await getCases("recovered");
+  const deaths = await getCases("deaths");
+  console.log({ confirmed, recovered, deaths });
+  return Promise.all([confirmed, recovered, deaths])
+    .then((data) => {
+      return data;
+    })
+    .catch((error) => {
+      return error;
+    });
+};
+
+export default getAllCases;

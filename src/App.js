@@ -5,6 +5,8 @@ import Header from "./components/Header";
 import ContainerCharts from "./components/ContainerCharts";
 import PageLoading from "./components/PageLoading";
 import LazyLoad from "react-lazyload";
+import PageError from "./components/PageError";
+import getAllCases from "./utils/getCases";
 
 class App extends Component {
   state = {
@@ -20,26 +22,29 @@ class App extends Component {
 
   async fetchData() {
     this.setState({ loading: true });
-    try {
-      const confirmed = await getCases("confirmed");
-      const recovered = await getCases("recovered");
-      const deaths = await getCases("deaths");
-      this.setState({
-        data: {
-          confirmed: confirmed,
-          recovered: recovered,
-          deaths: deaths,
-        },
-        loading: false,
+    getAllCases()
+      .then((data) => {
+        this.setState({
+          loading: false,
+          data: {
+            confirmed: data.confirmed,
+            recovered: data.recovered,
+            deaths: data.deaths,
+          },
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+        this.setState({ loading: false, error: error });
       });
-    } catch (error) {
-      this.setState({ loading: false, error: error });
-    }
   }
 
   renderCharts() {
     if (this.state.loading) {
       return <PageLoading />;
+    }
+    if (this.state.error) {
+      return <PageError message={this.state.error.message} />;
     }
     if (
       !this.state.loading &&
