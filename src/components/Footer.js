@@ -10,7 +10,7 @@ const Footer = () => {
           <h1>
             Designed with ❤ by{" "}
             <a
-              href="https://github.com/LeonardoCoding"
+              href="https://github.com/CodingLeonardo"
               target="_blank"
               className="Footer-link"
               rel="noopener noreferrer"

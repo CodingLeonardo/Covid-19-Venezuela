@@ -1,4 +1,4 @@
-import React, { Component, lazy, Suspense } from "react";
+import React, { Component } from "react";
 import getCases from "./utils/getCases";
 import Layout from "./components/Layout";
 import Header from "./components/Header";
@@ -22,8 +22,8 @@ class App extends Component {
 
   async fetchData() {
     this.setState({ loading: true });
-    getAllCases()
-      .then((data) => {
+    getAllCases().then(
+      (data) => {
         this.setState({
           loading: false,
           data: {
@@ -32,11 +32,12 @@ class App extends Component {
             deaths: data.deaths,
           },
         });
-      })
-      .catch((error) => {
+      },
+      (error) => {
         console.log(error);
         this.setState({ loading: false, error: error });
-      });
+      }
+    );
   }
 
   renderCharts() {
