@@ -4,28 +4,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@craco/craco": "^5.6.4",
     "@leonardor16/covid-19-proyection": "^1.0.0",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
     "chart.js": "^2.9.3",
-    "postcss-preset-env": "^6.7.0",
-    "react": "^16.13.1",
-    "react-chartjs-2": "^2.9.0",
-    "react-dom": "^16.13.1",
-    "react-lazyload": "^2.6.7",
-    "react-scripts": "3.4.1"
+    "svelte": "^3.20.1"
   },
   "scripts": {
     "predeploy": "yarn run build",
     "deploy": "gh-pages -d build",
-    "dev:react": "craco start",
-    "dev": "npm-run-all -l -p dev:react",
-    "build": "craco build",
-    "serve": "serve -s build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "webpack-dev-server --open --mode development",
+    "build": "craco build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -43,13 +30,23 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/polyfill": "^7.8.7",
+    "@babel/preset-env": "^7.9.5",
     "@fullhuman/postcss-purgecss": "^2.1.0",
     "autoprefixer": "^9.7.5",
+    "babel-loader": "^8.1.0",
     "cssnano": "^4.1.10",
     "gh-pages": "^2.2.0",
+    "html-webpack-plugin": "^4.2.0",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^7.1.0",
+    "postcss-preset-env": "^6.7.0",
     "serve": "^11.3.0",
-    "terser-webpack-plugin": "^2.3.5"
+    "svelte-loader": "^2.13.6",
+    "terser-webpack-plugin": "^2.3.5",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   }
 }
