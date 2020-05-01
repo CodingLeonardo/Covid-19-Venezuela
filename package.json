@@ -12,7 +12,7 @@
     "predeploy": "yarn run build",
     "deploy": "gh-pages -d build",
     "dev": "webpack-dev-server --open --mode development",
-    "build": "craco build"
+    "build": "mkdir build && rm -r build && webpack --mode production"
   },
   "eslintConfig": {
     "extends": "react-app"
