@@ -1,18 +1,13 @@
 # Covid-19-Venezula
 
-Es una pagina web que nos muestra los indices de casos confirmados, recuperados y muertes.
+Es una pagina web en la que se muestra informacion sobre los casos de COVID-19 en Venzuela.
 
 ## Construido con 🔨
 
-- [React](https://es.reactjs.org/) - Usado para la interfaz de usuario.
+- [Svelte](https://svelte.dev/) - Usado para la interfaz de usuario.
 
-- [TailwindCSS](https://tailwindcss.com/) - Usado para crear los estilos en base a clases.
+- [Sapper](https://sapper.svelte.dev/) - Usado para la generacion sitios web estaticos.
 
-- [PostCSS](https://postcss.org/) - Usado para transpilar CSS.
+## Licencia
 
-- [CSSNano](https://cssnano.co/) - Usado para minificar los archivos css.
-
-- [PurgeCSS](https://purgecss.com/) - Usado para quitar las clase CSS no usadas.
-
-- [ParticlesJS](https://vincentgarreau.com/particles.js/) - Usado para poner particulas al background de la pagina.
-https://purgecss.com/
+[MIT](https://github.com/CodingLeonardo/Covid-19-Venezuela/blob/master/LICENSE)
