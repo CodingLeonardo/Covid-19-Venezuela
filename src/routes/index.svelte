@@ -1,9 +1,8 @@
 <script>
   import { onMount } from "svelte";
-  import Layout from "./components/Layout";
-  import ChartLine from "./components/ChartLine";
-  import ChartPie from "./components/ChartPie";
-  import Loader from "./components/Loader";
+  import ChartLine from "../components/ChartLine";
+  import ChartPie from "../components/ChartPie";
+  import Loader from "../components/Loader";
 
   const baseURL = "https://api.covid19api.com/dayone/country/venezuela/status/";
 
@@ -62,21 +61,25 @@
   }
 </style>
 
+<svelte:head>
+  <title>COVID-19 - Venezuela</title>
+</svelte:head>
+
 {#if loading}
   <div class="PageLoading">
-    <Loader />
+    <div class="container">
+      <Loader />
+    </div>
   </div>
 {:else}
-  <Layout>
-    <main>
-      <div class="container">
-        <ChartPie
-          {cases}
-          title="Todos los casos de COVID-19 en Venezuela de hoy" />
-        <ChartLine
-          {cases}
-          title="Todos los casos desde el primer reporte COVID-19 en Venezuela" />
-      </div>
-    </main>
-  </Layout>
+  <main>
+    <div class="container">
+      <ChartPie
+        {cases}
+        title="Todos los casos de COVID-19 en Venezuela de hoy" />
+      <ChartLine
+        {cases}
+        title="Todos los casos desde el primer reporte COVID-19 en Venezuela" />
+    </div>
+  </main>
 {/if}

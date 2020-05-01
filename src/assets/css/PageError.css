@@ -1,8 +1,0 @@
-.PageError {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: var(--almost);
-  background-color: var(--secondary-100);
-}
