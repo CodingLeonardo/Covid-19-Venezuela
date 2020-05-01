@@ -6,13 +6,17 @@
   "dependencies": {
     "@leonardor16/covid-19-proyection": "^1.0.0",
     "chart.js": "^2.9.3",
-    "svelte": "^3.20.1"
+    "compression": "^1.7.4",
+    "polka": "^0.5.2",
+    "sirv": "^0.4.2"
   },
   "scripts": {
     "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build",
-    "dev": "webpack-dev-server --open --mode development",
-    "build": "mkdir build && rm -r build && webpack --mode production"
+    "deploy": "yarn run export && node ./scripts/gh-pages.js",
+    "dev": "sapper dev",
+    "build": "sapper build",
+    "export": "sapper export --basepath Covid-19-Venezuela --legacy",
+    "start": "node __sapper__/build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -42,7 +46,9 @@
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^7.1.0",
     "postcss-preset-env": "^6.7.0",
+    "sapper": "^0.27.12",
     "serve": "^11.3.0",
+    "svelte": "^3.21.0",
     "svelte-loader": "^2.13.6",
     "terser-webpack-plugin": "^2.3.5",
     "webpack": "^4.42.1",
