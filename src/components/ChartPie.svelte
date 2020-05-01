@@ -42,7 +42,8 @@
             text: title,
             fontSize: 20,
             padding: 30,
-            fontColor: "#01113E"
+            fontColor: "#01113E",
+            fontFamily: "Fjalla One, sans-serif"
           },
           legend: {
             position: "bottom",

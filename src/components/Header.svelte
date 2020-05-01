@@ -23,6 +23,21 @@
   .Header h1 span:nth-child(3) {
     color: var(--secondary-300);
   }
+  @media screen and (min-width: 320px) {
+    .Header h1 {
+      font-size: 2em;
+    }
+  }
+  @media screen and (min-width: 375px) {
+    .Header h1 {
+      font-size: 2.2em;
+    }
+  }
+  @media screen and (min-width: 425px) {
+    .Header h1 {
+      font-size: 2.5em;
+    }
+  }
 </style>
 
 <div class="Header">

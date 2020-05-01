@@ -48,7 +48,6 @@
           ]
         },
         options: {
-          // responsive: true,
           scales: {
             xAxes: [
               {
@@ -66,7 +65,8 @@
             text: title,
             fontSize: 20,
             padding: 30,
-            fontColor: "#01113E"
+            fontColor: "#01113E",
+            fontFamily: "Fjalla One, sans-serif"
           },
           legend: {
             position: "bottom",
@@ -115,6 +115,11 @@
     position: relative;
     height: 80vh;
     margin: 1em 0;
+  }
+  @media screen and (min-width: 320px) {
+    .container-chart {
+      height: 70vh;
+    }
   }
 </style>
 

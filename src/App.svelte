@@ -70,12 +70,12 @@
   <Layout>
     <main>
       <div class="container">
-        <ChartLine
-          {cases}
-          title="Todos los casos desde el primer reporte COVID-19 en Venezuela" />
         <ChartPie
           {cases}
           title="Todos los casos de COVID-19 en Venezuela de hoy" />
+        <ChartLine
+          {cases}
+          title="Todos los casos desde el primer reporte COVID-19 en Venezuela" />
       </div>
     </main>
   </Layout>

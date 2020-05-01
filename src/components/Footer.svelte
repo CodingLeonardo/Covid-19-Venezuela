@@ -15,16 +15,34 @@
     font-size: 1.8em;
     margin-right: 0.2em;
   }
+
   a {
     font-weight: lighter;
     text-decoration: underline;
     color: white;
   }
+  @media screen and (min-width: 320px) {
+    h1 {
+      font-size: 1.2em;
+    }
+  }
+  @media screen and (min-width: 425px) {
+    h1 {
+      font-size: 1.5em;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    h1 {
+      font-size: 1.8em;
+    }
+  }
 </style>
 
 <footer>
   <h1>
-    Designed with ❤ by
+    Designed with
+    <span>&#128154;</span>
+    by
     <a href="https://github.com/CodingLeonardo" target="_blank">
       @LeonardoCoding
     </a>
