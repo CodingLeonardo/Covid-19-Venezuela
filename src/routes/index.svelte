@@ -60,6 +60,32 @@
     width: 100%;
     height: 100vh;
   }
+
+  @media screen and (min-width: 320px) {
+    .PageLoading {
+      height: 64.5vh;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .PageLoading {
+      height: 73.8vh;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .PageLoading {
+      height: 74vh;
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    .PageLoading {
+      height: 82.1vh;
+    }
+  }
+  @media screen and (min-width: 2560px) {
+    .PageLoading {
+      height: 100vh;
+    }
+  }
 </style>
 
 <svelte:head>
