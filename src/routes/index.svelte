@@ -58,7 +58,7 @@
     align-items: center;
     background: var(--secondary-100);
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 5em - 3.5em);
   }
 </style>
 
