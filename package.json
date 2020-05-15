@@ -15,7 +15,7 @@
     "deploy": "yarn run export && node ./scripts/gh-pages.js",
     "dev": "sapper dev",
     "build": "sapper build",
-    "export": "sapper export",
+    "export": "sapper export  --basepath Covid-19-Venezuela",
     "start": "node __sapper__/build",
     "serve": "serve __sapper__/export"
   },
