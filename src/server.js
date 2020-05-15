@@ -8,7 +8,6 @@ const dev = NODE_ENV === "development";
 
 polka() // You can also use Express
   .use(
-    "Covid-19-Venezuela",
     compression({ threshold: 0 }),
     sirv("static", { dev }),
     sapper.middleware()
