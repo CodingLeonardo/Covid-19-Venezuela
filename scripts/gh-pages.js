@@ -1,7 +1,7 @@
 const ghpages = require("gh-pages");
 
 ghpages.publish(
-  "__sapper__/export/", // <-- replace yourproject with your repo name
+  "__sapper__/export/Covid-19-Venezuela", // <-- replace yourproject with your repo name
   {
     branch: "gh-pages",
     repo: "https://github.com/codingleonardo/Covid-19-Venezuela.git",
