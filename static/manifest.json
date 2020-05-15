@@ -4,7 +4,7 @@
   "name": "COVID-19 - Venezuela",
   "short_name": "COVID-19 - Venezuela",
   "display": "minimal-ui",
-  "start_url": "/Covid-19-Venezuela",
+  "start_url": "/Covid-19-Venezuela/",
   "icons": [
     {
       "src": "favicon.ico",
