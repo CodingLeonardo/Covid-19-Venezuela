@@ -1,5 +1,6 @@
 <script>
   import { onMount } from "svelte";
+  import { draw, fade, slide, scale } from "svelte/transition";
   import ChartLine from "../components/ChartLine";
   import ChartPie from "../components/ChartPie";
   import Loader from "../components/Loader";
@@ -57,7 +58,7 @@
     align-items: center;
     background: var(--secondary-100);
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 5em - 3.5em);
   }
 </style>
 
@@ -66,13 +67,13 @@
 </svelte:head>
 
 {#if loading}
-  <div class="PageLoading">
+  <div class="PageLoading" transition:fade={{ x: -200, duration: 300 }}>
     <div class="container">
       <Loader />
     </div>
   </div>
 {:else}
-  <main>
+  <main in:scale={{ x: -200, duration: 500, delay: 100 }}>
     <div class="container">
       <ChartPie
         {cases}
