@@ -64,6 +64,9 @@
 
 <svelte:head>
   <title>COVID-19 - Venezuela</title>
+  <meta
+    name="description"
+    content="Mantente informado sobre los nuevos casos de Covid-19 en Venezuela." />
 </svelte:head>
 
 {#if loading}
