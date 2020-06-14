@@ -44,7 +44,7 @@
     <span>&#128154;</span>
     by
     <a href="https://github.com/CodingLeonardo" target="_blank">
-      @LeonardoCoding
+      @CodingLeonardo
     </a>
   </h1>
 </footer>
