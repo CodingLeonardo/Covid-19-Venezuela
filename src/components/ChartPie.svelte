@@ -29,9 +29,9 @@
               backgroundColor: ["#E8BF13", "#01113E", "#A4061C"],
               borderColor: ["#E8BF13", "#01113E", "#A4061C"],
               data: [
-                data.confirmed[data.confirmed.length - 2].Cases,
-                data.recovered[data.recovered.length - 2].Cases,
-                data.deaths[data.deaths.length - 2].Cases
+                data.confirmed[data.confirmed.length - 1].Cases,
+                data.recovered[data.recovered.length - 1].Cases,
+                data.deaths[data.deaths.length - 1].Cases
               ]
             }
           ]
@@ -59,8 +59,7 @@
             xPadding: 20,
             yPadding: 20,
             bodyFontSize: 15,
-            bodySpacing: 10,
-            mode: "x-axis"
+            bodySpacing: 10
           }
         }
       });
