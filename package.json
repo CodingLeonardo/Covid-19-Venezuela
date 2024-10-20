@@ -4,7 +4,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@leonardor16/covid-19-proyection": "^1.0.0",
     "chart.js": "^2.9.3",
     "compression": "^1.7.4",
     "polka": "^0.5.2",
