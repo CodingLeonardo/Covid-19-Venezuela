@@ -5,43 +5,26 @@
   import ChartPie from "../components/ChartPie";
   import Loader from "../components/Loader";
 
-  const baseURL = "https://api.covid19api.com/dayone/country/venezuela/status/";
-
-  let data = undefined;
-  let cases = {
-    confirmed: [],
-    recovered: [],
-    deaths: []
-  };
+  let timeline = [];
+  let summary = {}
   let loading = false;
 
-  const getAllCases = async () => {};
-
   const fetchData = async () => {
-    const casesStatus = ["confirmed", "recovered", "deaths"];
-    const promises = casesStatus.map(status =>
-      fetch(`${baseURL}${status}/live`)
-    );
     loading = true;
-    Promise.all(promises)
-      .then(res => {
-        const responses = res.map(response => response.json());
-        return Promise.all(responses);
-      })
-      .then(
-        data => {
-          cases = {
-            confirmed: data[0],
-            recovered: data[1],
-            deaths: data[2]
-          };
-          loading = false;
-        },
-        error => {
-          cases = new Error(error);
-        }
-      );
-  };
+    const promises = [fetch("https://covid19.patria.org.ve/api/v1/timeline"), fetch("https://covid19.patria.org.ve/api/v1/summary")]
+
+    Promise.all(promises).then((res) => {
+      const responses = res.map(response => response.json());
+      return Promise.all(responses);
+    }).then((data) => {
+      timeline = data[0];
+      summary = data[1];
+      loading = false;
+    }).catch((error) => {
+      console.error(error);
+      error = true;
+    })
+  }
 
   onMount(fetchData);
 </script>
@@ -79,10 +62,10 @@
   <main in:scale={{ x: -200, duration: 500, delay: 100 }}>
     <div class="container">
       <ChartPie
-        {cases}
-        title="Todos los casos de COVID-19 en Venezuela de hoy" />
+        data={summary}
+        title="Resumen de todos los casos hasta la fecha" />
       <ChartLine
-        {cases}
+        data={timeline}
         title="Todos los casos desde el primer reporte COVID-19 en Venezuela" />
     </div>
   </main>

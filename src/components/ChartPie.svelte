@@ -2,21 +2,14 @@
   import { afterUpdate } from "svelte";
   import Chart from "chart.js";
 
-  export let cases;
+  export let data;
   export let title;
-
-  $: data = {
-    confirmed: cases.confirmed,
-    recovered: cases.recovered,
-    deaths: cases.deaths
-  };
-  $: console.log(data);
 
   let ctx;
   let chart;
 
   function totalCasesChart() {
-    if (!data.confirmed && !data.recovered && !data.deaths) {
+    if (!data.Confirmed || !data.Recovered || !data.Deaths) {
       return;
     } else {
       ctx = document.getElementById("chartPie");
@@ -29,9 +22,9 @@
               backgroundColor: ["#E8BF13", "#01113E", "#A4061C"],
               borderColor: ["#E8BF13", "#01113E", "#A4061C"],
               data: [
-                data.confirmed[data.confirmed.length - 1].Cases,
-                data.recovered[data.recovered.length - 1].Cases,
-                data.deaths[data.deaths.length - 1].Cases
+                data.Confirmed.Count,
+                data.Recovered.Count,
+                data.Deaths.Count
               ]
             }
           ]

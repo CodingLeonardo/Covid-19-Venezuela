@@ -2,28 +2,21 @@
   import { afterUpdate } from "svelte";
   import Chart from "chart.js";
 
-  export let cases;
+  export let data;
   export let title;
-
-  $: data = {
-    confirmed: cases.confirmed,
-    recovered: cases.recovered,
-    deaths: cases.deaths
-  };
-  $: console.log(data);
 
   let ctx;
   let chart;
 
   function totalCasesChart() {
-    if (!data.confirmed && !data.recovered && !data.deaths) {
+    if (!data.length) {
       return;
     } else {
       ctx = document.getElementById("chartLine");
       chart = new Chart(ctx, {
         type: "line",
         data: {
-          labels: data.confirmed.map(item =>
+          labels: data.map(item =>
             new Intl.DateTimeFormat("es-VE", {
               month: "long",
               day: "numeric"
@@ -32,17 +25,17 @@
           datasets: [
             {
               label: "Confirmados",
-              data: data.confirmed.map(item => item.Cases),
+              data: data.map(item => item.Confirmed.Count),
               borderColor: "#E8BF13"
             },
             {
               label: "Recuperados",
-              data: data.recovered.map(item => item.Cases),
+              data: data.map(item => item.Recovered.Count),
               borderColor: "#01113E"
             },
             {
               label: "Muertes",
-              data: data.deaths.map(item => item.Cases),
+              data: data.map(item => item.Deaths.Count),
               borderColor: "#A4061C"
             }
           ]
