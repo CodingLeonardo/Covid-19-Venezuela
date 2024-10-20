@@ -1,6 +1,6 @@
 # Covid-19-Venezula
 
-Es una pagina web en la que se muestra informacion sobre los casos de COVID-19 en Venzuela.
+Es una pagina web en la que se muestra informacion sobre los casos de COVID-19 en Venezuela.
 
 ## Construido con 🔨
 
